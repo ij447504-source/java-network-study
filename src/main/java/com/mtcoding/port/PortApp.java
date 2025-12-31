@@ -1,7 +1,6 @@
 package com.mtcoding.port;
 
 import com.google.gson.Gson;
-
 import java.util.HashMap;
 import java.util.List;
 
@@ -9,7 +8,7 @@ import java.util.List;
 public class PortApp {
     public static void main(String[] args) {
         /**
-         * 초보때는 try 로 잡기
+         * 초보때는 try 로 먼저 잡기
          */
 
         try{
@@ -96,8 +95,9 @@ public class PortApp {
                 System.out.println("도착지 : "+item.getArrAirportNm());
                 System.out.println("출발시간 : "+item.getDepPlandTime());
                 System.out.println("도착시간 : "+item.getArrPlandTime());
-                //삼항연산자 (ternary operator) null이면 0을 넣고 아니라면 금액넣어줘!
-                System.out.println("이코노미가격 : "+item.getEconomyCharge());//null 값이 있을 수 있어 터질수도있음 그래서 if 사용
+                //null 값이 있을 수 있어 터질수도있음 그래서 if 사용
+                // null이면 "항공권이 없습니다"를 넣고 아니라면 금액넣어줘!
+                System.out.println("이코노미가격 : "+item.getEconomyCharge());
                 System.out.println();
 
             }
